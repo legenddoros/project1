@@ -22,17 +22,17 @@ const pages = [
   {
     text: 'Connection with others gives us strength and peace.',
     animation: 'sun.gif',
-    audio: 'thunderstorm.m4a',
+    audio: 'birds.mp3',
   },
   {
     text: 'Remember the sun<br>will always rise.<br>With darkness comes light.',
     animation: 'treasure.gif',
-    audio: 'thunderstorm.m4a',
+    audio: 'birds.mp3',
   },
   {
     text: 'THE END',
     animation: 'end.gif',
-    audio: 'thunderstorm.m4a',
+    audio: 'birds.mp3',
   },
 ];
 
