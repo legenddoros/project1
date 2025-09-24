@@ -1,0 +1,133 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  margin: 0;
+}
+
+#story-container {
+  margin-top: 2rem;
+}
+
+#animation {
+  width: 600px;
+  height: 600px;
+  margin: 0 auto 1rem;
+  background-size: contain;
+  background-position: center;
+  border-radius: 10px;
+}
+
+#story-text {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+#navigation button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin: 0 10px;
+  background-color: #222;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#navigation button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* RAIN OVERLAY */
+#rain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  display: none; /* default: hidden */
+}
+
+/* Individual raindrop */
+.drop {
+  position: absolute;
+  width: 2px;
+  height: 15px;
+  background: rgba(255, 255, 255, 0.5);
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.lightning-flash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  opacity: 0;
+  z-index: 1100; /* higher than rain overlay */
+  animation: flash 3s infinite;
+  pointer-events: none;
+}
+
+@keyframes flash {
+  0%,
+  97%,
+  100% {
+    opacity: 0;
+  }
+  98% {
+    opacity: 0.2;
+  }
+  99% {
+    opacity: 0.6;
+  }
+}
+
+.page-0 {
+  width: 100vw;
+  height: 100vh;
+  background: url(Open.jpg) no-repeat center center;
+  background-size: contain;
+}
+
+@keyframes sunrise {
+  0% {
+    background-color: #001f3d; /* Dark Blue */
+  }
+  100% {
+    background-color: #87cefa; /* Sky Blue */
+  }
+}
+
+.sunrise {
+  animation: sunrise 5s ease-in-out forwards; /* Apply animation for 5 seconds */
+  color: black;
+}
+
+@keyframes grow {
+  0% {
+    font-size: 2rem;
+  }
+  100% {
+    font-size: 12rem;
+  }
+}
+
+.grow {
+  animation: grow 5s ease-in-out forwards; /* Apply animation for 5 seconds */
+}
